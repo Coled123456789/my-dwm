@@ -23,15 +23,6 @@ static const char *colors[][3]      = {
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-/*volume commands*/
-static const char *upvol[] = {"pamixer", "-i", "5", NULL};
-static const char *downvol[] = {"pamixer", "-d", "5", NULL};
-static const char *togglemute[] = {"pamixer", "-t", NULL};
-
-/*light commands*/
-static const char *morelight[] = {"light", "-A", "10"};
-static const char *lesslight[] = {"light", "-U", "10"};
-
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -105,14 +96,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
-	//Volume Controls
-	{ 0,				XF86XK_AudioRaiseVolume, spawn, {.v = upvol} },
-	{ 0,				XF86XK_AudioLowerVolume, spawn, {.v = downvol} },
-	{ 0,				XF86XK_AudioMute, spawn, {.v = togglemute} },
-	//Brightness
-	{0,				XF86XK_MonBrightnessUp, spawn, {.v = morelight}},
-	{0,				XF86XK_MonBrightnessDown, spawn, {.v = lesslight}},
-	
 };
 
 /* button definitions */
