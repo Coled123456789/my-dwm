@@ -21,6 +21,12 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
+/* systray patch */
+static const unsigned int systraypinning = 0;
+static const unsigned int systrayspacing = 2;
+static const unsigned int systraypinningfailfirst = 1;/*1: if pinning fails, display systray on first monitor, else display on last*/
+static const int showsystray = 1; /*0 means no systray*/
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
